@@ -1,0 +1,91 @@
+//Clearfix
+.Clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {
+  .Clearfix;
+}
+
+
+
+//Align vertical element
+.table-table { //Used to be different than .table class in bootstrap
+  display: table;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+//Bottom shadow
+.bottom-shadow {
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 8px 6px -6px grey;
+  -moz-box-shadow: 0 8px 6px -6px grey;
+  box-shadow: 0 8px 6px -6px grey;
+}
+
+
+//Fixed aspect ration 1:1 for element
+.profile-img {
+  width: 100%;
+  /* whatever width you want */
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    padding-top: 100%;
+    /* 1:1 ratio */
+    display: block;
+    content: '';
+  }
+}
+.img-main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  img {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    border-radius: 50%;
+  }
+}
+
+
+//Fixed aspect ration 16:9 for element
+.img-wrapper {
+  width: 100%;
+  /* whatever width you want */
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    padding-top: 56.25%;
+    /* 16:9 ratio */
+    display: block;
+    content: '';
+  }
+}
+.img-main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  img {
+    width: 100%;
+  }
+}
+
+
